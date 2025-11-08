@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VoltCastaApplication {
+public class VoltCastApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VoltCastaApplication.class, args);
+		SpringApplication.run(VoltCastApplication.class, args);
 	}
 
 }
