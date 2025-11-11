@@ -41,14 +41,14 @@ spring:
                   - StripPrefix=1
 
               - id: newsfeed-service
-                uri: http://localhost:8086
+                uri: http://localhost:8085
                 predicates:
                   - Path=/newsfeed/**
                 filters:
                   - StripPrefix=1
 
               - id: weatherservice-service
-                uri: http://localhost:8087
+                uri: http://localhost:8086
                 predicates:
                   - Path=/weatherservice/**
                 filters:
