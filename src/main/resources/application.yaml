@@ -40,11 +40,17 @@ spring:
                 filters:
                   - StripPrefix=1
 
-              - id: idk-service
-                uri: http://localhost:8085
+              - id: newsfeed-service
+                uri: http://localhost:8086
                 predicates:
-                  - Path=/idk/**
+                  - Path=/newsfeed/**
                 filters:
                   - StripPrefix=1
 
+              - id: weatherservice-service
+                uri: http://localhost:8087
+                predicates:
+                  - Path=/weatherservice/**
+                filters:
+                  - StripPrefix=1
 
