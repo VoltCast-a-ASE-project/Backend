@@ -6,15 +6,47 @@ spring:
       server:
         webmvc:
           routes:
-            - id: fronius-service
-              uri: http://localhost:8081
-              predicates:
-                - Path=/fronius/**
-              filters:
-                - StripPrefix=1
-            - id: kostal-service
-              uri: http://localhost:8082
-              predicates:
-                - Path=/kostal/**
-              filters:
-                - StripPrefix=1
+
+              """
+              Example:
+                Request on: http://gateway:8080/kostal/status
+                Predicate: check, if /kostal/servie fits the pattern /kostal/**  --> /status
+                Filter: new path: http://localhost:8082/status
+              """
+
+                - id: fronius-service
+                  uri: http://localhost:8081
+                  predicates:
+                    - Path=/fronius/**
+                  filters:
+                    - StripPrefix=1
+
+                - id: kostal-service
+                  uri: http://localhost:8082
+                  predicates:
+                    - Path=/kostal/**
+                  filters:
+                    - StripPrefix=1
+
+                - id: shelly-service
+                  uri: http://localhost:8083
+                  predicates:
+                    - Path=/shelly/**
+                  filters:
+                    - StripPrefix=1
+
+                - id: forecasting-service
+                  uri: http://localhost:8084
+                  predicates:
+                    - Path=/forecasting/**
+                  filters:
+                    - StripPrefix=1
+
+                - id: idk-service
+                  uri: http://localhost:8085
+                  predicates:
+                    - Path=/idk/**
+                  filters:
+                    - StripPrefix=1
+
+
