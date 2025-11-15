@@ -52,6 +52,11 @@ spring:
                 filters:
                   - StripPrefix=1
 
+              - id: test-purpose
+                uri: http://localhost:8082
+                predicates:
+                  - Path=/hello
+
 logging:
   level:
     root: INFO
