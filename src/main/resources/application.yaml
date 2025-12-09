@@ -66,10 +66,10 @@ spring:
                 filters:
                   - StripPrefix=1
 
-              - id: test-purpose
-                uri: http://localhost:8082
+              - id: alerting-service
+                uri: http://localhost:8087
                 predicates:
-                  - Path=/hello
+                  - Path=/alert/**
 
 logging:
   level:
