@@ -70,6 +70,8 @@ spring:
                 uri: http://localhost:8087
                 predicates:
                   - Path=/alert/**
+                filters:
+                  - StripPrefix=1
 
 logging:
   level:
